@@ -23,7 +23,27 @@
 
     <script>
 
+        document.getElementById("lang").addEventListener("click", changeLang);
+        var img = document.getElementById("img");
+        var lang = true;
 
+        function changeLang() {
+
+            var source = img.src
+
+            //I could have used a regex, but simplicity is first
+
+            console.log(source)
+            if (lang) {
+                img.src = "./images/CV_ES.png";
+                lang = false;
+            } else {
+                img.src = "./images/CV_EN.png";
+                lang = true;
+            }
+             
+
+        };
 
     </script>
     
