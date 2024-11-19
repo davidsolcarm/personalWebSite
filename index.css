@@ -1,12 +1,74 @@
-.hidden {
-    visibility: hidden;
+html {
+    font-family: Arial, Helvetica, sans-serif
 }
 
-table {
-    
+
+#cvImg {
+    width: 1000px;
 }
 
-.shown {
+
+#cv-container{
+    display: grid;
+    place-items: center;
+}
+
+#cv-table td {
+    display: grid;
+    place-items: center;
+}
+
+#cv-table td:nth-child(1) input {
     width: 500px;
+    background-color: white;
+    border-color: whitesmoke;
+}
+
+#links-table {
+    display: grid;
+    place-items: center;
+}
+#links-table td{
+    place-items: center;
+    align-items: center;
+}
+
+#links-table > tbody > tr:nth-child(2) > td:nth-child(1),
+#links-table > tbody > tr:nth-child(4) > td:nth-child(1),
+#links-table > tbody > tr:nth-child(5) > td:nth-child(1) {
+    text-align: center;
+}
+
+
+
+.name-app {
+    width: 200px;
+    text-align: center;
+    background-color: rgb(251, 250, 250);
+    font-size: large;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.id-app {
+    width: 600px;
+    text-align: center;
+    background-color: rgb(251, 250, 250);
+    font-size: small;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.img-app {
+    width: 400px;
+    height: 150px;
+    text-align: center;
+
+}
+
+.link-icon {
+    width: 300px;
+    border: 1px solid transparent;
+    border-right-color: black;
 
 }

@@ -4,46 +4,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculum</title>
+
+    <link href="./index.css" rel="stylesheet" type="text/css" >
+
+
+
 </head>
 <body>
 
-    <table>
-        <tr>
-            <td>
-                <input type="button" id="lang" value="Language">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="./images/CV_ES.png" id="img" class="shown">
-            </td>
-        </tr>
 
-    </table>
+    <div id="cv-container">
+        <table id="cv-table">
+            <tr>
+                <td>
+                    <input type="button" id="lang" value="Language">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="position: relative; width: 100%; height: 0; padding-top: 129.4118%;
+                        padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+                        border-radius: 8px; will-change: transform;">
+                        <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                            src="https://www.canva.com/design/DAF0iWn3V2s/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                        </iframe>
+                    </div>
+                    <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAF0iWn3V2s&#x2F;view?utm_content=DAF0iWn3V2s&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a> 
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <table id="links-table">
+            <tr>
+                <th colspan="2">
+                    <h2 id="lang_Porfolio">Porfolio</h2>
+                </th>
+            </tr>
+            <tr>
+                <td class="link-icon">
+                    <a href="https://github.com/davidsolcarm/">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="100px">
+                    </a>
+                    <br>
+                    Github
+                </td>
+                <td rowspan="4">  
+                    <p id="available-apps">Some of my publicly available Apps</p>
+
+                    <div class="app-table">
+
+                        <table style="border-collapse: collapse;">
+                            <tr>
+                                <td id="img-app2" class="img-app"><a href="https://chromewebstore.google.com/detail/free-fast-note/hldflfbkaeahfonlhcoefnfmjdghbaao"><img src="https://lh3.googleusercontent.com/cGmuFPr8iQfFlb3tc_fIOpQ9LtmYQ0FkTMSL4h7DGTROGcY4bXkDV5tV4WCP0psMdd11WwYmWOpyED1ugvRvZkmg=s60" width="100px"></a></td>
+                                <td id="name-app2" class="name-app">Free Fast Note</td>
+                                <td id="id-app2" class="id-app">ID: hldflfbkaeahfonlhcoefnfmjdghbaao</td>
+                            </tr>
+                            <tr>
+                                <td style="height: 50px;"></td>
+                            </tr>
+                            <tr>
+                                <td id="img-app1" class="img-app"><a href="https://chromewebstore.google.com/detail/app-diagramas/ncngcnnjimaimabjaodbcmhpmcjlagpm"><img src="https://lh3.googleusercontent.com/KD-upAeyPOt6HNdYkoSZ8jDABtd4PC_suzy06BnlPmBuwCoTvN9m6oiU6qLvNPxlguuZj2i88UkoAd_7AKu7dyvc_Q=s60" width="100px"></a></td>
+                                <td id="name-app1" class="name-app">App Diagramas</td>
+                                <td id="id-app1" class="id-app">ID: ncngcnnjimaimabjaodbcmhpmcjlagpm</td>
+                            </tr>
+                        </table>
+    
+                    </div>   
+                              
+                </td>
+
+            <tr>
+
+            </tr>
+                <td class="link-icon">
+                    <a href="https://www.linkedin.com/in/david-sol%C3%ADs-carmona/">
+                    <img src="https://static.vecteezy.com/system/resources/previews/018/930/480/non_2x/linkedin-logo-linkedin-icon-transparent-free-png.png" width="100px">
+                    </a>
+                    <br>
+                    LinkedIn
+                </td>
+            </tr>
+
+            </tr>
+                <td class="link-icon">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZkY6j1mbpEzV_DHHKNREygXAdi1BPyesJ0Ru_WbuIZdwYcUkHnAZLYns0vFIFTprNhDkIsqSOaRIbQWUr-3Wnn-GaXaMZf1sZmiV7T01__pCSifxpbCdc_V-gthtXFt5qSyNX29ObkZc/s1600/12-07+Efemerides+de+Tecnologia+Chrome-Web-Store.png" width="100px">
+                    <br>
+                    Chrome Store
+                </td>
+            </tr>
+            
+            
+        </table>
+    </div>
+    <div style="height: 200px;">
+
+    </div>
+
+
+
+
+
 
     <script>
 
         document.getElementById("lang").addEventListener("click", changeLang);
-        var img = document.getElementById("img");
+
+        let langBtn = document.getElementById("lang");
+        let lang_Porfolio = document.getElementById("lang_Porfolio");
+        let available_apps = document.getElementById("available-apps");
+
+
+        
         var lang = true;
 
         function changeLang() {
 
-            var source = img.src
 
             //I could have used a regex, but simplicity is first
 
-            console.log(source)
             if (lang) {
-                img.src = "./images/CV_ES.png";
+
+                langBtn.value = "Lenguaje";
+                lang_Porfolio.innerText = "Portafolio";
+                available_apps.innerText = "Algunas de mis aplicaciones disponibles públicamente";
                 lang = false;
             } else {
-                img.src = "./images/CV_EN.png";
+
+                langBtn.value = "Language";
+                lang_Porfolio.innerText = "Portafolio"
+                available_apps.innerText = "Some of my publicly available Apps";
                 lang = true;
             }
              
 
         };
+
 
     </script>
     
